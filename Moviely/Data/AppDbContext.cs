@@ -11,5 +11,6 @@ namespace Moviely.Data
         }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<MemberShipType> MembershipTypes { get; set; }
     }
 }
