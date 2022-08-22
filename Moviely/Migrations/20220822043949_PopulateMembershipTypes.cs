@@ -7,13 +7,13 @@ namespace Moviely.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.Sql(
-                "INSERT INTO MembershipTypes (Id, SignUpFee, DurationInMonths, DiscountRate, MembershipTypeId) VALUES (1, 0, 0, 0, 1)");
+                "INSERT INTO MembershipTypes (Id, SignUpFee, DurationInMonths, DiscountRate) VALUES (1, 0, 0, 0)");
             migrationBuilder.Sql(
-                "INSERT INTO MembershipTypes (Id, SignUpFee, DurationInMonths, DiscountRate, MembershipTypeId) VALUES (2, 30, 1, 10, 2)");
+                "INSERT INTO MembershipTypes (Id, SignUpFee, DurationInMonths, DiscountRate) VALUES (2, 30, 1, 10)");
             migrationBuilder.Sql(
-                "INSERT INTO MembershipTypes (Id, SignUpFee, DurationInMonths, DiscountRate, MembershipTypeId) VALUES (3, 90, 3, 15, 3)");
+                "INSERT INTO MembershipTypes (Id, SignUpFee, DurationInMonths, DiscountRate) VALUES (3, 90, 3, 15)");
             migrationBuilder.Sql(
-                "INSERT INTO MembershipTypes (Id, SignUpFee, DurationInMonths, DiscountRate, MembershipTypeId) VALUES (4, 300, 12, 20, 4)");
+                "INSERT INTO MembershipTypes (Id, SignUpFee, DurationInMonths, DiscountRate) VALUES (4, 300, 12, 20)");
             
         }
 
