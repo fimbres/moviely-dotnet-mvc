@@ -17,7 +17,7 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                Discount Rate
+                Membership Name
             </th>
             <th></th>
         </tr>
@@ -36,7 +36,7 @@
                     @Html.ActionLink(item.Name, "Details", "Customers", new {id=item.Id})
                 </td>
                 <td>
-                    @item.MembershipType.DiscountRate%
+                    @item.MembershipType.Name
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
