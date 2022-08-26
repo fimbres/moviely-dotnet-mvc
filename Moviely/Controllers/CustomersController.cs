@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Moviely.Data;
 using Moviely.Models;
+using Moviely.ViewModels;
 
 namespace Moviely.Controllers
 {
@@ -48,8 +49,13 @@ namespace Moviely.Controllers
         // GET: Customers/Create
         public IActionResult Create()
         {
-            ViewData["MembershipTypeId"] = new SelectList(_context.MembershipTypes, "Id", "Id");
-            return View();
+            var membershiptTypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipsTypes = membershiptTypes,
+
+            };
+            return View(viewModel);
         }
 
         // POST: Customers/Create
