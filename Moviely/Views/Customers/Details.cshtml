@@ -27,7 +27,13 @@
             @Html.DisplayNameFor(model => model.MembershipType)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MembershipType.Id)
+            @Html.DisplayFor(model => model.MembershipType.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BirthDate)
         </dd>
     </dl>
 </div>

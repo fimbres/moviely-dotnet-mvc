@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Moviely.Models
 {
@@ -12,5 +13,7 @@ namespace Moviely.Models
         public bool isSubscribedToNewsLetter { get; set; }
         public MemberShipType MembershipType { get; set; }
         public byte MembershipTypeId { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
+        public DateTime BirthDate { get; set; }
     }
 }
