@@ -49,13 +49,8 @@ namespace Moviely.Controllers
         // GET: Customers/Create
         public IActionResult Create()
         {
-            var membershiptTypes = _context.MembershipTypes.ToList();
-            var viewModel = new NewCustomerViewModel
-            {
-                MembershipsTypes = membershiptTypes,
-
-            };
-            return View(viewModel);
+            ViewData["MembershipTypeId"] = new SelectList(_context.MembershipTypes, "Id", "Name");
+            return View();
         }
 
         // POST: Customers/Create

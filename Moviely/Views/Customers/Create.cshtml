@@ -1,4 +1,4 @@
-﻿@model Moviely.ViewModels.NewCustomerViewModel
+﻿@model Moviely.Models.Customer
 
 @{
     ViewData["Title"] = "Create";
@@ -14,24 +14,27 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Customer.Name" class="control-label"></label>
-                <input asp-for="Customer.Name" class="form-control" />
-                <span asp-validation-for="Customer.Name" class="text-danger"></span>
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Customer.BirthDate" class="control-label"></label>
-                <input asp-for="Customer.BirthDate" class="form-control" />
-                <span asp-validation-for="Customer.BirthDate" class="text-danger"></span>
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" class="form-control" type="date" asp-format="{0:yyyy/MM/dd}"/>
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Customer.isSubscribedToNewsLetter" /> @Html.DisplayNameFor(model => model.Customer.isSubscribedToNewsLetter)
+                    <input class="form-check-input" asp-for="isSubscribedToNewsLetter" /> @Html.DisplayNameFor(model => model.isSubscribedToNewsLetter)
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="Customer.MembershipTypeId" class="control-label"></label>
-                @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipsTypes, "Id", "Name"), "Select a Membership" , new { @class = "form-select" })
+                <label asp-for="MembershipTypeId" class="control-label"></label>
+                <select asp-for="MembershipTypeId" class ="form-control" asp-items="ViewBag.MembershipTypeId"/>
+                <span asp-validation-for="MembershipTypeId" class="text-danger"></span>
             </div>
+            @Html.AntiForgeryToken()
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

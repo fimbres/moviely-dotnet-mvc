@@ -38,6 +38,7 @@
                 <input asp-for="numberInStock" class="form-control" />
                 <span asp-validation-for="numberInStock" class="text-danger"></span>
             </div>
+            @Html.AntiForgeryToken()
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
