@@ -15,6 +15,7 @@ namespace Moviely.Dtos
         public bool isSubscribedToNewsLetter { get; set; }
         [Required]
         public byte MembershipTypeId { get; set; }
+        public MembershipTypeDto MembershipType { get; set; }
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime? BirthDate { get; set; }
     }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Moviely.Dtos
 {
-    public class Movie
+    public class MovieDto
     {
         [Key]
         public int Id { get; set; }

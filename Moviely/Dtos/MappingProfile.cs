@@ -9,7 +9,8 @@ namespace Moviely.Dtos
         public MappingProfile()
         {
             Mapper.CreateMap<Customer, CustomerDto>();
-            Mapper.CreateMap<CustomerDto, Customer>();
+            Mapper.CreateMap<Movie, MovieDto>();
+            Mapper.CreateMap<MemberShipType, MembershipTypeDto>();
         }
     }
 }
